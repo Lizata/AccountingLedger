@@ -1,6 +1,9 @@
 package org.example;
 
+import java.io.IOException;
 import java.util.Scanner;
+
+import static org.example.Reports.reportsScreen;
 
 public class Screens {
 
@@ -22,6 +25,7 @@ public class Screens {
                 ========= 2) Display deposits from current month
                 ========= 3) Enter the deposit source
                 ========= 4) Enter the deposit vendor
+                Enter your choice:
                 """;
     }
 
@@ -43,6 +47,7 @@ public class Screens {
                 ========== P) Display payments only
                 ========== R) Show additional Reports
                 ========== H) Home
+                Enter your choice:
                 """;
 
     }
@@ -56,32 +61,14 @@ public class Screens {
                 ========== 4) Previous Year
                 ========== 5) Search by Vendor
                 ========== 0) Back
+                Enter your choice:
+                
                 """;
 
-        System.out.println("Select from these choices below:");
-
-
-
-
-
-
-
-    public static void showHomeScreen(){ boolean appGo = true;
-            while (appGo) {
-
-                // Show the user the menu
-                String homeScreen = homeScreen();
-                System.out.println(homeScreen);
-
-                // Get the user input
-                String homeScreenOption;
-                homeScreenOption = inputScanner.nextLine();
-            }
 
     }
 
-                """
-        }}
+    public static void showHomeScreen(Scanner scanner) {
         boolean appGo = true;
         while (appGo) {
 
@@ -91,9 +78,8 @@ public class Screens {
 
             // Get the user input
             String homeScreenOption;
-            homeScreenOption = inputScanner.nextLine();
+            homeScreenOption = scanner.nextLine();
 
-            // Decide what to do with it
             switch (homeScreenOption.toUpperCase()) {
                 case "D":
                     System.out.print(depositScreen());
@@ -105,7 +91,6 @@ public class Screens {
                     System.out.print(ledgerScreen());
                     appGo = false;
                     break;
-
                 case "X":
                     System.out.println("Extract over a quarter million");
                     appGo = false;
@@ -115,5 +100,98 @@ public class Screens {
                     break;
             }
         }
+        while (!appGo) ;
+
     }
-}
+
+    private static void printErrorMessage() {
+        System.out.println("I didn't catch that, please try again");
+    }
+
+    public static void showledgerScreen(Scanner inputScanner) {
+        boolean appGo = false;
+        do {
+            String ledgerScreen = ledgerScreen();
+            System.out.println(ledgerScreen);
+
+            switch (ledgerScreen) {
+                case "A":
+                    System.out.println("Display all entries");
+                    break;
+                case "D":
+                    System.out.println("Display deposits only");
+                    break;
+                case "P":
+                    System.out.println("Display payments only");
+                    break;
+                case "R":
+                    System.out.println("Show additional Reports");
+                    break;
+                case "H":
+                    System.out.println("Return to Home");
+                case "F":
+                    appGo = true;
+                    break;
+                default:
+                    printErrorMessage();
+                    break;
+            }
+        } while (appGo);
+    }
+
+    public static void showreportsScreen(Scanner inputScanner) throws IOException {
+        boolean appGo = true;
+        do {
+        }  while(appGo);
+            String reportsScreen = reportsScreen();
+            System.out.println(reportsScreen);
+
+            switch (reportsScreen) {
+                case "1":
+                    System.out.println("Month To Date");
+                    break;
+                case "2":
+                    System.out.println("Previous Month");
+                    break;
+                case "3":
+                    System.out.println("Year To Date");
+                    break;
+                case "4":
+                    System.out.println("Previous Year");
+                    break;
+                case "5":
+                    System.out.println("Search By Vendor");
+                    break;
+                case "0":
+                    System.out.println("Back");
+                    appGo = true;
+                    break;
+                default:
+
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

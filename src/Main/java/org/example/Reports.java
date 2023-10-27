@@ -26,7 +26,7 @@ public static String reportsScreen() throws IOException {
             // Handle "Month To Date" report
             //Display transactions for the current month
             int caseOneCurrentMonth = LocalDate.now().getMonthValue();
-            BufferedReader caseOneReader = new BufferedReader(new FileReader("transactions"));
+            BufferedReader caseOneReader = new BufferedReader(new FileReader("transactions.csv"));
             // DisplayTransactionMonthHistory(caseOneReader, CaseOneCurrentYear, CaseOneCurrentMonth, Case
             break;
         case 2:
