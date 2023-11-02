@@ -18,7 +18,7 @@ public class AccountingLedgerApp {
 
         Screens.showHomeScreen(inputScanner);
         Screens.showledgerScreen(inputScanner);
-        Screens.showreportsScreen(inputScanner);
+        Screens.showreportScreen(inputScanner);
 
 
 

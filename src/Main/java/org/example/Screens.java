@@ -62,7 +62,7 @@ public class Screens {
                 ========== 5) Search by Vendor
                 ========== 0) Back
                 Enter your choice:
-                
+                 
                 """;
 
 
@@ -139,7 +139,7 @@ public class Screens {
         } while (appGo);
     }
 
-    public static void showreportsScreen(Scanner inputScanner) throws IOException {
+    public static void showreportScreen(Scanner inputScanner) throws IOException {
         boolean appGo = true;
         do {
         }  while(appGo);
@@ -171,7 +171,32 @@ public class Screens {
 
             }
         }
+public static void showdepositsScreen(Scanner inputScanner) {
+    boolean appGo = true;
+    do {
+    } while (appGo);
+    String depositScreen = depositScreen();
+    System.out.println(depositScreen);
+
+    switch (depositScreen) {
+        case "1":
+            System.out.println("Enter the date of deposit as - yyyy-mm-dd");
+            break;
+        case "2":
+            System.out.println("Enter the time the deposit was made 00:00:00");
+            break;
+        case "3":
+            System.out.println("Enter your deposit description");
+            break;
+        case"4":
+            System.out.println("Enter the Vendor");
+            break;
+        case "5":
+            System.out.println("Enter your deposit amount");
+
     }
+}
+}
 
 
 

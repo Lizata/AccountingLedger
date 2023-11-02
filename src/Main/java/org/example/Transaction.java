@@ -20,8 +20,8 @@ public class Transaction {
         this.amount = inputAmount;
     }
 
-    public void setTransactionDate(LocalDate setDate) {
-        this.date = setDate;
+    public LocalDate getTransactionDate() {
+        return date;
     }
 
     public void setTransactionTime(LocalTime timeInput) {
@@ -36,5 +36,20 @@ public class Transaction {
     public void setVendor(String inputVendor) {
         this.vendor = inputVendor;
     }
+    public void setAmount(double inputAmount) {
+        this.amount = inputAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "Date: " + date + "\n" +
+                "Time: " + time + "\n" +
+                "Description: " + description + "\n" +
+                "Vendor: " + vendor + "\n" +
+                "Amount: " + amount;
+
+
+    }
+
 }
 
