@@ -20,22 +20,6 @@ public class AccountingLedgerApp {
         Screens.showledgerScreen(inputScanner);
         Screens.showreportScreen(inputScanner);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 }

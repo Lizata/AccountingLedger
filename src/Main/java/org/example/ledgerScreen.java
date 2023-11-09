@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.util.Scanner;
 import java.util.ArrayList;
 public enum ledgerScreen {
-    ;
+
 
     static void ledgerMenu(Scanner scanner) {
         System.out.println("Welcome To Your Personal Ledger");
